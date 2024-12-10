@@ -7,12 +7,18 @@
 
 struct ListItemGenerator {
 
-    static func generateListItems(count: Int) async -> [ListItem] {
-        var items: [ListItem] = []
+    static func generateListItems(count: Int = 20, folderFrequency: Double = 0.5) -> [ListItem] {
+        let folderFrequency = max(0.0, min(1.0, folderFrequency))
 
-        for _ in 0..<count {
-            items.append(.link(LinkItem()))
+        return (0..<count).map { _ in
+            if Double.random(in: 0...1) <= folderFrequency {
+                let children = generateListItems(count: count / 2, folderFrequency: folderFrequency * 0.4)
+                let item = FolderItem(items: children)
+                return .folder(item)
+            } else {
+                let item = LinkItem()
+                return .link(item)
+            }
         }
-        return items
     }
 }
