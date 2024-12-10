@@ -11,7 +11,7 @@ import SwiftUI
 struct WhopTakeHomeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

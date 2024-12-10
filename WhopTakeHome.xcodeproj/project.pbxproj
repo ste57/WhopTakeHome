@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DCF2DE472D01652400C119E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF2DE412D01652400C119E5 /* Preview Assets.xcassets */; };
+		DCF2DE482D01652400C119E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF2DE432D01652400C119E5 /* Assets.xcassets */; };
+		DCF2DE4A2D01652400C119E5 /* WhopTakeHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE452D01652400C119E5 /* WhopTakeHomeApp.swift */; };
+		DCF2DE4D2D01652D00C119E5 /* WhopTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE4B2D01652D00C119E5 /* WhopTakeHomeTests.swift */; };
+		DCF2DE512D01652F00C119E5 /* WhopTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE4E2D01652F00C119E5 /* WhopTakeHomeUITests.swift */; };
+		DCF2DE522D01652F00C119E5 /* WhopTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE4F2D01652F00C119E5 /* WhopTakeHomeUITestsLaunchTests.swift */; };
+		DCF2DE582D07AEA500C119E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE572D07AEA500C119E5 /* HomeView.swift */; };
+		DCF2DE5A2D07AFB700C119E5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE592D07AFB500C119E5 /* HomeViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DCF2DE252D015C1600C119E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +38,15 @@
 		DCF2DE142D015C1500C119E5 /* WhopTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhopTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF2DE242D015C1600C119E5 /* WhopTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhopTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF2DE2E2D015C1600C119E5 /* WhopTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhopTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF2DE412D01652400C119E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DCF2DE432D01652400C119E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCF2DE452D01652400C119E5 /* WhopTakeHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopTakeHomeApp.swift; sourceTree = "<group>"; };
+		DCF2DE4B2D01652D00C119E5 /* WhopTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopTakeHomeTests.swift; sourceTree = "<group>"; };
+		DCF2DE4E2D01652F00C119E5 /* WhopTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopTakeHomeUITests.swift; sourceTree = "<group>"; };
+		DCF2DE4F2D01652F00C119E5 /* WhopTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DCF2DE572D07AEA500C119E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DCF2DE592D07AFB500C119E5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		DCF2DE162D015C1500C119E5 /* WhopTakeHome */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WhopTakeHome;
-			sourceTree = "<group>";
-		};
-		DCF2DE272D015C1600C119E5 /* WhopTakeHomeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WhopTakeHomeTests;
-			sourceTree = "<group>";
-		};
-		DCF2DE312D015C1600C119E5 /* WhopTakeHomeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WhopTakeHomeUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DCF2DE112D015C1500C119E5 /* Frameworks */ = {
@@ -75,9 +76,9 @@
 		DCF2DE0B2D015C1500C119E5 = {
 			isa = PBXGroup;
 			children = (
-				DCF2DE162D015C1500C119E5 /* WhopTakeHome */,
-				DCF2DE272D015C1600C119E5 /* WhopTakeHomeTests */,
-				DCF2DE312D015C1600C119E5 /* WhopTakeHomeUITests */,
+				DCF2DE462D01652400C119E5 /* WhopTakeHome */,
+				DCF2DE4C2D01652D00C119E5 /* WhopTakeHomeTests */,
+				DCF2DE502D01652F00C119E5 /* WhopTakeHomeUITests */,
 				DCF2DE152D015C1500C119E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +91,59 @@
 				DCF2DE2E2D015C1600C119E5 /* WhopTakeHomeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DCF2DE422D01652400C119E5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2DE412D01652400C119E5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DCF2DE462D01652400C119E5 /* WhopTakeHome */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2DE452D01652400C119E5 /* WhopTakeHomeApp.swift */,
+				DCF2DE572D07AEA500C119E5 /* HomeView.swift */,
+				DCF2DE592D07AFB500C119E5 /* HomeViewModel.swift */,
+				DCF2DE532D07AC8C00C119E5 /* Models */,
+				DCF2DE542D07ACA000C119E5 /* Resources */,
+				DCF2DE422D01652400C119E5 /* Preview Content */,
+			);
+			path = WhopTakeHome;
+			sourceTree = "<group>";
+		};
+		DCF2DE4C2D01652D00C119E5 /* WhopTakeHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2DE4B2D01652D00C119E5 /* WhopTakeHomeTests.swift */,
+			);
+			path = WhopTakeHomeTests;
+			sourceTree = "<group>";
+		};
+		DCF2DE502D01652F00C119E5 /* WhopTakeHomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2DE4E2D01652F00C119E5 /* WhopTakeHomeUITests.swift */,
+				DCF2DE4F2D01652F00C119E5 /* WhopTakeHomeUITestsLaunchTests.swift */,
+			);
+			path = WhopTakeHomeUITests;
+			sourceTree = "<group>";
+		};
+		DCF2DE532D07AC8C00C119E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCF2DE542D07ACA000C119E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2DE432D01652400C119E5 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +160,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				DCF2DE162D015C1500C119E5 /* WhopTakeHome */,
 			);
 			name = WhopTakeHome;
 			packageProductDependencies = (
@@ -130,9 +181,6 @@
 			dependencies = (
 				DCF2DE262D015C1600C119E5 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				DCF2DE272D015C1600C119E5 /* WhopTakeHomeTests */,
-			);
 			name = WhopTakeHomeTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +200,6 @@
 			);
 			dependencies = (
 				DCF2DE302D015C1600C119E5 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DCF2DE312D015C1600C119E5 /* WhopTakeHomeUITests */,
 			);
 			name = WhopTakeHomeUITests;
 			packageProductDependencies = (
@@ -212,6 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF2DE472D01652400C119E5 /* Preview Assets.xcassets in Resources */,
+				DCF2DE482D01652400C119E5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF2DE582D07AEA500C119E5 /* HomeView.swift in Sources */,
+				DCF2DE4A2D01652400C119E5 /* WhopTakeHomeApp.swift in Sources */,
+				DCF2DE5A2D07AFB700C119E5 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF2DE4D2D01652D00C119E5 /* WhopTakeHomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF2DE512D01652F00C119E5 /* WhopTakeHomeUITests.swift in Sources */,
+				DCF2DE522D01652F00C119E5 /* WhopTakeHomeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,14 +449,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhopTakeHome/Preview Content\"";
-				DEVELOPMENT_TEAM = 49MJRZBUY4;
+				DEVELOPMENT_TEAM = 8C9LLAKVM5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,14 +480,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhopTakeHome/Preview Content\"";
-				DEVELOPMENT_TEAM = 49MJRZBUY4;
+				DEVELOPMENT_TEAM = 8C9LLAKVM5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
