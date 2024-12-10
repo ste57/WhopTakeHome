@@ -12,16 +12,22 @@ class HomeViewModel {
 
     // MARK: - Interface
 
-    public private(set) var items: [ListItem]
+    public private(set) var viewState: ViewState
 
-    public var isLoading: Bool { // convert to state
-        return items.isEmpty
+    public var items: [ListItem] {
+        guard case .content(let items) = viewState else { return [] }
+        return items
+    }
+
+    enum ViewState: Equatable {
+        case loading
+        case content([ListItem])
     }
 
     // MARK: - Lifecycle
 
     init() {
-        self.items = []
+        self.viewState = .loading
     }
 }
 
@@ -30,5 +36,9 @@ class HomeViewModel {
 extension HomeViewModel {
 
     func loadItems() {
+        Task {
+            let items = ListItemGenerator.generateListItems()
+            viewState = .content(items)
+        }
     }
 }
