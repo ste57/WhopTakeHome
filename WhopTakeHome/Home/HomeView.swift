@@ -11,7 +11,28 @@ struct HomeView: View {
     @State private var viewModel = HomeViewModel()
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            if viewModel.isLoading {
+                ProgressView("Loading...")
+                    .progressViewStyle(.circular)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                List(viewModel.items) { item in
+                    row(for: item)
+                }
+            }
+        }
+        .animation(.easeInOut, value: viewModel.isLoading)
+        .onAppear {
+            viewModel.loadItems()
+        }
+    }
+}
+
+private extension HomeView {
+
+    func row(for item: ListItem) -> some View {
+        Text("")
     }
 }
 

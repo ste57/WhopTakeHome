@@ -18,6 +18,7 @@
 		DCF2DE602D08D27100C119E5 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE5F2D08D26E00C119E5 /* ListItem.swift */; };
 		DCF2DE622D08D2A800C119E5 /* LinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE612D08D2A600C119E5 /* LinkItem.swift */; };
 		DCF2DE642D08D2AE00C119E5 /* FolderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE632D08D2AB00C119E5 /* FolderItem.swift */; };
+		DCF2DE672D08D57700C119E5 /* ListItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE662D08D57100C119E5 /* ListItemGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		DCF2DE5F2D08D26E00C119E5 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		DCF2DE612D08D2A600C119E5 /* LinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkItem.swift; sourceTree = "<group>"; };
 		DCF2DE632D08D2AB00C119E5 /* FolderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderItem.swift; sourceTree = "<group>"; };
+		DCF2DE662D08D57100C119E5 /* ListItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				DCF2DE452D01652400C119E5 /* WhopTakeHomeApp.swift */,
 				DCF2DE5E2D08D1FA00C119E5 /* Home */,
 				DCF2DE532D07AC8C00C119E5 /* Models */,
+				DCF2DE652D08D56900C119E5 /* Utility */,
 				DCF2DE542D07ACA000C119E5 /* Resources */,
 				DCF2DE422D01652400C119E5 /* Preview Content */,
 			);
@@ -161,6 +164,14 @@
 				DCF2DE592D07AFB500C119E5 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DCF2DE652D08D56900C119E5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2DE662D08D57100C119E5 /* ListItemGenerator.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 				DCF2DE642D08D2AE00C119E5 /* FolderItem.swift in Sources */,
 				DCF2DE602D08D27100C119E5 /* ListItem.swift in Sources */,
 				DCF2DE582D07AEA500C119E5 /* HomeView.swift in Sources */,
+				DCF2DE672D08D57700C119E5 /* ListItemGenerator.swift in Sources */,
 				DCF2DE4A2D01652400C119E5 /* WhopTakeHomeApp.swift in Sources */,
 				DCF2DE622D08D2A800C119E5 /* LinkItem.swift in Sources */,
 				DCF2DE5A2D07AFB700C119E5 /* HomeViewModel.swift in Sources */,
