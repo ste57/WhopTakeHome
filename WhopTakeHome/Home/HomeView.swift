@@ -12,17 +12,19 @@ struct HomeView: View {
 
     var body: some View {
         ZStack {
-            if viewModel.isLoading {
+            switch viewModel.viewState {
+            case .loading:
                 ProgressView("Loading...")
                     .progressViewStyle(.circular)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-            } else {
-                List(viewModel.items) { item in
+
+            case .content(let items):
+                List(items) { item in
                     row(for: item)
                 }
+                .listRowSpacing(12.0)
             }
         }
-        .animation(.easeInOut, value: viewModel.isLoading)
+        .animation(.easeInOut, value: viewModel.viewState)
         .onAppear {
             viewModel.loadItems()
         }
@@ -32,7 +34,13 @@ struct HomeView: View {
 private extension HomeView {
 
     func row(for item: ListItem) -> some View {
-        Text("")
+        HStack {
+            Image(systemName: item.imageName)
+                .padding(.trailing, 8.0)
+
+            Text(item.title)
+                .font(.custom("Courier", size: 15.0))
+        }
     }
 }
 

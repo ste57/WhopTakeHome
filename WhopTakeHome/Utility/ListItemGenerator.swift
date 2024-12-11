@@ -13,10 +13,10 @@ struct ListItemGenerator {
         return (0..<count).map { _ in
             if Double.random(in: 0...1) <= folderFrequency {
                 let children = generateListItems(count: count / 2, folderFrequency: folderFrequency * 0.4)
-                let item = FolderItem(items: children)
+                let item = FolderItem(title: Strings.folder, items: children)
                 return .folder(item)
             } else {
-                let item = LinkItem()
+                let item = LinkItem(title: "Link")
                 return .link(item)
             }
         }
