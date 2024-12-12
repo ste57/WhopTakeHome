@@ -11,11 +11,15 @@ struct ListItemRow: View {
     let item: ListItem
 
     var body: some View {
-        switch item {
-        case .link(let item):
-            LinkRow(linkItem: item)
-        case .folder(let item):
-            FolderRow(folderItem: item)
+        Group {
+            switch item {
+            case .link(let item):
+                LinkRow(linkItem: item)
+            case .folder(let item):
+                FolderRow(folderItem: item)
+            }
         }
+        .frame(alignment: .leading)
+        .background(.background)
     }
 }

@@ -24,17 +24,17 @@ struct FolderRow: View {
     private var folderBody: some View {
         HStack {
             Image(systemName: SystemImage.folder)
-
             Text(folderItem.title)
-                .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(.leading)
+        .padding(.trailing)
     }
 
     private var childrenList: some View {
         ForEach(folderItem.items) { item in
+            Divider()
             ListItemRow(item: item)
         }
+        .padding([.leading, .top])
     }
 }
 
