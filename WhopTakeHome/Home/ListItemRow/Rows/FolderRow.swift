@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FolderRow: View {
     public let folderItem: FolderItem
-
     @Environment(FolderStateCache.self) private var folderStateCache
 
     var body: some View {
