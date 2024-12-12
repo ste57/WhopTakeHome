@@ -24,6 +24,10 @@ import SwiftUI
         case content([ListItem])
     }
 
+    // MARK: - Private
+
+    private var isFetchingData = false
+
     // MARK: - Lifecycle
 
     init() {
@@ -38,8 +42,29 @@ extension HomeViewModel {
 
     func loadItems() {
         Task {
-            let items = ListItemGenerator.generateListItems()
+            let items = await generateItems()
             viewState = .content(items)
         }
+    }
+
+    func fetchNextPage() {
+        guard
+            !isFetchingData,
+            case .content(let currentItems) = viewState
+        else { return }
+
+        Task {
+            isFetchingData = true
+            defer { isFetchingData = false }
+
+            let newItems = await generateItems()
+            viewState = .content(currentItems + newItems)
+        }
+    }
+
+    private func generateItems() async -> [ListItem] {
+        await Task.detached(priority: .userInitiated) {
+            ListItemGenerator.generateListItems()
+        }.value
     }
 }
