@@ -8,6 +8,6 @@
 import Foundation
 
 struct LinkItem: Equatable {
-    let id = UUID().uuidString
+    let id = UUID()
     let title: String
 }

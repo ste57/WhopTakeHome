@@ -8,7 +8,7 @@
 import Foundation
 
 struct FolderItem: Equatable {
-    let id = UUID().uuidString
+    let id = UUID()
     let title: String
     let items: [ListItem]
 }

@@ -11,24 +11,21 @@ enum ListItem: Equatable, Identifiable {
     case link(LinkItem)
     case folder(FolderItem)
 
-    var id: String {
+    var id: UUID {
         switch self {
-        case .link(let link): return link.id
-        case .folder(let folder): return folder.id
+        case .link(let link):
+            link.id
+        case .folder(let folder):
+            folder.id
         }
     }
 
     var title: String {
         switch self {
-        case .link(let link): return link.title
-        case .folder(let folder): return folder.title
-        }
-    }
-
-    var imageName: String {
-        switch self {
-        case .link: return SystemImage.link.systemName
-        case .folder: return SystemImage.folder.systemName
+        case .link(let link):
+            link.title
+        case .folder(let folder):
+            folder.title
         }
     }
 }
