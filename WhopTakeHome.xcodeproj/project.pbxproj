@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		DC23E0362D090AF1004DB57B /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E0352D090AEF004DB57B /* SystemImage.swift */; };
 		DC23E0382D091175004DB57B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E0372D091173004DB57B /* Strings.swift */; };
+		DC23E03B2D0920EE004DB57B /* LinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E03A2D0920E9004DB57B /* LinkRow.swift */; };
+		DC23E03D2D0920F4004DB57B /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E03C2D0920F2004DB57B /* FolderRow.swift */; };
+		DC23E0452D0A5F9A004DB57B /* FolderStateCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E0442D0A5F96004DB57B /* FolderStateCache.swift */; };
+		DC23E04C2D0A89A3004DB57B /* ListItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E04B2D0A899F004DB57B /* ListItemRow.swift */; };
 		DCF2DE472D01652400C119E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF2DE412D01652400C119E5 /* Preview Assets.xcassets */; };
 		DCF2DE482D01652400C119E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF2DE432D01652400C119E5 /* Assets.xcassets */; };
 		DCF2DE4A2D01652400C119E5 /* WhopTakeHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE452D01652400C119E5 /* WhopTakeHomeApp.swift */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		DC23E0352D090AEF004DB57B /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		DC23E0372D091173004DB57B /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		DC23E03A2D0920E9004DB57B /* LinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRow.swift; sourceTree = "<group>"; };
+		DC23E03C2D0920F2004DB57B /* FolderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRow.swift; sourceTree = "<group>"; };
+		DC23E0442D0A5F96004DB57B /* FolderStateCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStateCache.swift; sourceTree = "<group>"; };
+		DC23E04B2D0A899F004DB57B /* ListItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemRow.swift; sourceTree = "<group>"; };
 		DCF2DE142D015C1500C119E5 /* WhopTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhopTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF2DE242D015C1600C119E5 /* WhopTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhopTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF2DE2E2D015C1600C119E5 /* WhopTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhopTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +93,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC23E0392D0920E3004DB57B /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				DC23E03A2D0920E9004DB57B /* LinkRow.swift */,
+				DC23E03C2D0920F2004DB57B /* FolderRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		DC23E04A2D0A6983004DB57B /* ListItemRow */ = {
+			isa = PBXGroup;
+			children = (
+				DC23E04B2D0A899F004DB57B /* ListItemRow.swift */,
+				DC23E0392D0920E3004DB57B /* Rows */,
+			);
+			path = ListItemRow;
+			sourceTree = "<group>";
+		};
 		DCF2DE0B2D015C1500C119E5 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +192,7 @@
 			children = (
 				DCF2DE572D07AEA500C119E5 /* HomeView.swift */,
 				DCF2DE592D07AFB500C119E5 /* HomeViewModel.swift */,
+				DC23E04A2D0A6983004DB57B /* ListItemRow */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -176,6 +203,7 @@
 				DC23E0372D091173004DB57B /* Strings.swift */,
 				DC23E0352D090AEF004DB57B /* SystemImage.swift */,
 				DCF2DE662D08D57100C119E5 /* ListItemGenerator.swift */,
+				DC23E0442D0A5F96004DB57B /* FolderStateCache.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -317,15 +345,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC23E03B2D0920EE004DB57B /* LinkRow.swift in Sources */,
 				DCF2DE642D08D2AE00C119E5 /* FolderItem.swift in Sources */,
+				DC23E0452D0A5F9A004DB57B /* FolderStateCache.swift in Sources */,
 				DC23E0382D091175004DB57B /* Strings.swift in Sources */,
 				DCF2DE602D08D27100C119E5 /* ListItem.swift in Sources */,
 				DCF2DE582D07AEA500C119E5 /* HomeView.swift in Sources */,
+				DC23E04C2D0A89A3004DB57B /* ListItemRow.swift in Sources */,
 				DCF2DE672D08D57700C119E5 /* ListItemGenerator.swift in Sources */,
 				DC23E0362D090AF1004DB57B /* SystemImage.swift in Sources */,
 				DCF2DE4A2D01652400C119E5 /* WhopTakeHomeApp.swift in Sources */,
 				DCF2DE622D08D2A800C119E5 /* LinkItem.swift in Sources */,
 				DCF2DE5A2D07AFB700C119E5 /* HomeViewModel.swift in Sources */,
+				DC23E03D2D0920F4004DB57B /* FolderRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
