@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-@Observable
-class HomeViewModel {
+@MainActor @Observable class HomeViewModel {
 
     // MARK: - Interface
 
     public private(set) var viewState: ViewState
+    public private(set) var folderStateCache: FolderStateCache
 
     public var items: [ListItem] {
         guard case .content(let items) = viewState else { return [] }
@@ -28,6 +28,7 @@ class HomeViewModel {
 
     init() {
         self.viewState = .loading
+        self.folderStateCache = FolderStateCache()
     }
 }
 
