@@ -10,11 +10,13 @@ import WebKit
 
 struct WebView: UIViewRepresentable {
     public let url: URL
-    public let stateManager: WebViewStateManager
+    @Bindable public var stateManager: WebViewStateManager
 
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
+        webView.isOpaque = false
+        webView.backgroundColor = .clear
         return webView
     }
 
@@ -29,7 +31,7 @@ struct WebView: UIViewRepresentable {
 }
 
 class WebViewCoordinator: NSObject, WKNavigationDelegate {
-    let stateManager: WebViewStateManager
+    var stateManager: WebViewStateManager
 
     init(_ stateManager: WebViewStateManager) {
         self.stateManager = stateManager
