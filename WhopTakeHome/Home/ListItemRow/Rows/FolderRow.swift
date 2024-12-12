@@ -25,15 +25,13 @@ struct FolderRow: View {
             Image(systemName: SystemImage.folder)
             Text(folderItem.title)
         }
-        .padding(.trailing)
     }
 
     private var childrenList: some View {
         ForEach(folderItem.items) { item in
-            Divider()
             ListItemRow(item: item)
         }
-        .padding([.leading, .top])
+        .padding(.leading)
     }
 }
 

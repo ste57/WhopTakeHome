@@ -24,4 +24,8 @@ public class Strings {
     static var link: String {
         NSLocalizedString("Link", comment: "")
     }
+
+    static var files: String {
+        NSLocalizedString("Files", comment: "")
+    }
 }

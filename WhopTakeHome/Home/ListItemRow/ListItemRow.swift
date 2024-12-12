@@ -20,7 +20,6 @@ struct ListItemRow: View {
             }
         }
         .font(.custom("Courier", size: 16.0))
-        .frame(alignment: .leading)
-        .background(.background)
+        .frame(height: 44.0, alignment: .leading)
     }
 }

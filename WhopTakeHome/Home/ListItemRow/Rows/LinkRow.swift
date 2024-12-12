@@ -19,8 +19,8 @@ struct LinkRow: View {
                 Text(linkItem.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .foregroundStyle(.link)
         }
+        .foregroundStyle(.link)
         .accessibilityLabel(linkItem.title + " " + Strings.link)
     }
 }
