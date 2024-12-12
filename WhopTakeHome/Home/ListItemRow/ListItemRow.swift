@@ -19,6 +19,7 @@ struct ListItemRow: View {
                 FolderRow(folderItem: item)
             }
         }
+        .font(.custom("Courier", size: 16.0))
         .frame(alignment: .leading)
         .background(.background)
     }

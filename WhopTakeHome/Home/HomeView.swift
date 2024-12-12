@@ -41,7 +41,6 @@ struct HomeView: View {
                 }
             }
             .padding([.top, .leading, .trailing])
-            .animation(.easeInOut, value: items)
         }
         .environment(viewModel.folderStateCache)
     }
