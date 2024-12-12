@@ -10,6 +10,18 @@ import Foundation
 public class Strings {
 
     static var folder: String {
-        return NSLocalizedString("Folder", comment: "")
+        NSLocalizedString("Folder", comment: "")
+    }
+
+    static var loading: String {
+        NSLocalizedString("Loading", comment: "")
+    }
+
+    static var failed_to_load_page: String {
+        NSLocalizedString("Failed to load page", comment: "")
+    }
+
+    static var link: String {
+        NSLocalizedString("Link", comment: "")
     }
 }

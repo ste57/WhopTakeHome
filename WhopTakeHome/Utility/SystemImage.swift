@@ -8,4 +8,5 @@
 struct SystemImage {
     static let globe = "globe"
     static let folder = "folder"
+    static let warning = "exclamationmark.triangle"
 }
