@@ -11,30 +11,29 @@ struct HomeView: View {
     @State private var viewModel = HomeViewModel()
 
     var body: some View {
-        ZStack {
-            switch viewModel.viewState {
-            case .loading:
-                ProgressView("Loading...")
-                    .progressViewStyle(.circular)
+        NavigationStack {
+            ZStack {
+                switch viewModel.viewState {
+                case .loading:
+                    LoadingView()
 
-            case .content(let items):
-                list(items: items)
+                case .content(let items):
+                    list(items: items)
+                        .environment(viewModel.folderStateCache)
+                }
             }
-        }
-        .animation(.easeInOut, value: viewModel.viewState)
-        .onAppear {
-            viewModel.loadItems()
+            .animation(.easeInOut, value: viewModel.viewState)
         }
     }
 
     private func list(items: [ListItem]) -> some View {
         ScrollView {
-            LazyVStack(spacing: 0) {
+            LazyVStack {
                 ForEach(items) { item in
                     ListItemRow(item: item)
                         .padding(.all)
                         .onAppear {
-                            guard item == items[items.count - 4] else { return }
+                            guard item.id == items[items.count-4].id else { return }
                             viewModel.fetchNextPage()
                         }
                     Divider()
@@ -42,7 +41,6 @@ struct HomeView: View {
             }
             .padding([.top, .leading, .trailing])
         }
-        .environment(viewModel.folderStateCache)
     }
 }
 
