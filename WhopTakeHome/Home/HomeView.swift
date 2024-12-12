@@ -28,11 +28,20 @@ struct HomeView: View {
     }
 
     private func list(items: [ListItem]) -> some View {
-        List {
-            ForEach(items) { item in
-                ListItemRow(item: item)
-                    .padding([.top, .bottom], 8.0)
+        ScrollView {
+            LazyVStack(spacing: 0) {
+                ForEach(items) { item in
+                    ListItemRow(item: item)
+                        .padding(.all)
+                        .onAppear {
+                            guard item == items[items.count - 4] else { return }
+                            viewModel.fetchNextPage()
+                        }
+                    Divider()
+                }
             }
+            .padding([.top, .leading, .trailing])
+            .animation(.easeInOut, value: items)
         }
         .environment(viewModel.folderStateCache)
     }
