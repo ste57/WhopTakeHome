@@ -33,6 +33,7 @@ import SwiftUI
     init() {
         self.viewState = .loading
         self.folderStateCache = FolderStateCache()
+        loadItems()
     }
 }
 
