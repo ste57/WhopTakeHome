@@ -18,10 +18,7 @@ struct HomeView: View {
                     .progressViewStyle(.circular)
 
             case .content(let items):
-                List(items) { item in
-                    row(for: item)
-                }
-                .listRowSpacing(12.0)
+                list(items: items)
             }
         }
         .animation(.easeInOut, value: viewModel.viewState)
@@ -29,18 +26,15 @@ struct HomeView: View {
             viewModel.loadItems()
         }
     }
-}
 
-private extension HomeView {
-
-    func row(for item: ListItem) -> some View {
-        HStack {
-            Image(systemName: item.imageName)
-                .padding(.trailing, 8.0)
-
-            Text(item.title)
-                .font(.custom("Courier", size: 15.0))
+    private func list(items: [ListItem]) -> some View {
+        List {
+            ForEach(items) { item in
+                ListItemRow(item: item)
+                    .padding([.top, .bottom], 8.0)
+            }
         }
+        .environment(viewModel.folderStateCache)
     }
 }
 
