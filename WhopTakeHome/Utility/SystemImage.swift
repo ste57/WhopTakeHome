@@ -6,7 +6,7 @@
 //
 
 enum SystemImage: String {
-    case link
+    case globe
     case folder
 
     var systemName: String {
