@@ -19,13 +19,14 @@ struct WebViewContainer: View {
 
     var body: some View {
         ZStack {
-            if let url {
-                WebView(url: url, stateManager: stateManager)
-            }
             if case .error = stateManager.state {
                 errorView
-            } else if case .loading = stateManager.state {
-                LoadingView()
+            } else if let url {
+                WebView(url: url, stateManager: stateManager)
+
+                if case .loading = stateManager.state {
+                    LoadingView()
+                }
             }
         }
     }
