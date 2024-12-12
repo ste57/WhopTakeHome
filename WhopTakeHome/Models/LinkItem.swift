@@ -10,4 +10,5 @@ import Foundation
 struct LinkItem: Equatable {
     let id = UUID()
     let title: String
+    let urlString: String
 }

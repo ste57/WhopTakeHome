@@ -12,7 +12,7 @@ struct LinkRow: View {
 
     var body: some View {
         NavigationLink {
-            WebViewContainer(urlString: "")
+            WebViewContainer(urlString: linkItem.urlString)
         } label: {
             HStack {
                 Image(systemName: SystemImage.globe)
@@ -26,5 +26,5 @@ struct LinkRow: View {
 }
 
 #Preview {
-    LinkRow(linkItem: .init(title: "Link"))
+    LinkRow(linkItem: .init(title: "Whop", urlString: "https//www.whop.com"))
 }

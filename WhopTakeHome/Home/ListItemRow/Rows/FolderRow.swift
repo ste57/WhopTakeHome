@@ -52,8 +52,8 @@ private extension FolderRow {
 
 #Preview {
     let items: [ListItem] = [
-        .link(LinkItem(title: "Link1")),
-        .link(LinkItem(title: "Link2"))
+        .link(LinkItem(title: "Whop", urlString: "https://www.whop.com")),
+        .link(LinkItem(title: "Whop", urlString: "https://www.whop.com"))
     ]
     FolderRow(folderItem: FolderItem(title: "Folder", items: items))
         .environment(FolderStateCache())
