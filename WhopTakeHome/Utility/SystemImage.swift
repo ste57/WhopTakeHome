@@ -5,11 +5,7 @@
 //  Created by Stephen Sowole on 12/10/24.
 //
 
-enum SystemImage: String {
-    case globe
-    case folder
-
-    var systemName: String {
-        rawValue
-    }
+struct SystemImage {
+    static let globe = "globe"
+    static let folder = "folder"
 }
