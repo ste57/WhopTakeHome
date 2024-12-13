@@ -81,11 +81,22 @@ struct ListItemGeneratorTests {
         #expect(childFolderCount < 5)
     }
 
-    @Test func folderFrequencyBounds() {
+    @Test func folderFrequencyBounds() throws {
         let highFreq = ListItemGenerator.generateListItems(count: 10, folderFrequency: 1.5)
         let lowFreq = ListItemGenerator.generateListItems(count: 10, folderFrequency: -0.5)
+        let noItems = ListItemGenerator.generateListItems(count: 0, folderFrequency: 0.0)
+        let oneItem = ListItemGenerator.generateListItems(count: 1, folderFrequency: 1.0)
 
         #expect(highFreq.count == 10)
         #expect(lowFreq.count == 10)
+        #expect(noItems.count == 0)
+        #expect(oneItem.count == 1)
+
+        let firstFolder = try #require(oneItem.first)
+
+        guard case .folder(let folder) = firstFolder else {
+            throw TestError.unexpectedItemType(firstFolder)
+        }
+        #expect(folder.items.count == 1) // always at least 1 child item
     }
 }

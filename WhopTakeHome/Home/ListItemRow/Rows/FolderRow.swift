@@ -12,6 +12,8 @@ struct FolderRow: View {
     @Environment(FolderStateCache.self) private var folderStateCache
 
     var body: some View {
+        // DisclosureGroup for expand/collapse as List doesn't currently allow for manual
+        // `isExpanded` manipulation
         DisclosureGroup(isExpanded: isFolderExpanded) {
             childrenList
         } label: {

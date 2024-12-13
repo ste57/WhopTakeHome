@@ -34,6 +34,7 @@ import SwiftUI
         self.viewState = .loading
         self.folderStateCache = FolderStateCache()
         Task {
+            // fetch items as soon as this view is created
             await loadItems()
         }
     }
@@ -62,6 +63,8 @@ extension HomeViewModel {
     }
 
     private func generateItems() async -> [ListItem] {
+        // ensure we're running the generateListItems on a background thread to not block main as there's a very small
+        // possibility that we could have a long generation at any given time (depending on how many nested folders are generated)
         await Task.detached(priority: .userInitiated) {
             ListItemGenerator.generateListItems()
         }.value

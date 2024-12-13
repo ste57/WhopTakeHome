@@ -12,12 +12,6 @@ struct HomeView: View {
 
     init() {
         self.viewModel = HomeViewModel()
-        if let largeFont = UIFont(name: "Courier", size: 28.0) {
-            UINavigationBar.appearance().largeTitleTextAttributes = [.font: largeFont]
-        }
-        if let titleFont = UIFont(name: "Courier", size: 20.0) {
-            UINavigationBar.appearance().titleTextAttributes = [.font: titleFont]
-        }
     }
 
     var body: some View {
@@ -32,6 +26,7 @@ struct HomeView: View {
                         .environment(viewModel.folderStateCache)
                 }
             }
+            // only animate when switching from loading to content to avoid unnecessary animated transitions
             .animation(.easeInOut, value: viewModel.viewState == .loading)
             .navigationTitle(Strings.files)
             .navigationBarTitleDisplayMode(.large)
@@ -39,19 +34,22 @@ struct HomeView: View {
     }
 
     private func itemList(_ items: [ListItem]) -> some View {
+        // use a list vs lazyVStack for performance in large data sets
         List {
             ForEach(items) { item in
                 ListItemRow(item: item)
                     .task(id: item.id) {
+                        // since List doesn't have prefetching yet, simulate by starting the fetch process
+                        // 3 items from the bottom. Won't work if items has less than 3 items
                         if item.id == items[items.count - 4].id {
                             await viewModel.fetchNextPage()
                         }
                     }
             }
         }
-        .listStyle(.plain)
+        .listStyle(.plain) // switch to plain for performance boost
         .transaction { transaction in
-            transaction.disablesAnimations = true
+            transaction.disablesAnimations = true // disable animations for performance boost
         }
     }
 }

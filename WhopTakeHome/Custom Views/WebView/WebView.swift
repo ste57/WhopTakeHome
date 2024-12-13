@@ -15,7 +15,7 @@ struct WebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
-        webView.isOpaque = false
+        webView.isOpaque = false // need to turn opaquenes off to avoid white background
         webView.backgroundColor = .clear
         return webView
     }
