@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@Observable class WebViewStateManager {
+@MainActor @Observable class WebViewStateManager {
 
     // MARK: - Interface
 
