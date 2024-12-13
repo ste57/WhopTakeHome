@@ -42,9 +42,9 @@ struct HomeView: View {
         List {
             ForEach(items) { item in
                 ListItemRow(item: item)
-                    .onAppear {
+                    .task(id: item.id) {
                         if item.id == items[items.count - 4].id {
-                            viewModel.fetchNextPage()
+                            await viewModel.fetchNextPage()
                         }
                     }
             }

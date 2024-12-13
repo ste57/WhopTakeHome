@@ -33,7 +33,9 @@ import SwiftUI
     init() {
         self.viewState = .loading
         self.folderStateCache = FolderStateCache()
-        loadItems()
+        Task {
+            await loadItems()
+        }
     }
 }
 
@@ -41,26 +43,22 @@ import SwiftUI
 
 extension HomeViewModel {
 
-    func loadItems() {
-        Task {
-            let items = await generateItems()
-            viewState = .content(items)
-        }
+    public func loadItems() async {
+        let items = await generateItems()
+        viewState = .content(items)
     }
 
-    func fetchNextPage() {
+    public func fetchNextPage() async {
         guard
             !isFetchingData,
             case .content(let currentItems) = viewState
         else { return }
 
-        Task {
-            isFetchingData = true
-            defer { isFetchingData = false }
+        isFetchingData = true
+        defer { isFetchingData = false }
 
-            let newItems = await generateItems()
-            viewState = .content(currentItems + newItems)
-        }
+        let newItems = await generateItems()
+        viewState = .content(currentItems + newItems)
     }
 
     private func generateItems() async -> [ListItem] {

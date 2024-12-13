@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC08DDFC2D0BBBB000DDA962 /* FolderStateCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08DDFB2D0BBBAA00DDA962 /* FolderStateCacheTests.swift */; };
+		DC08DDFE2D0BBC5100DDA962 /* ListItemGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08DDFD2D0BBC4400DDA962 /* ListItemGeneratorTests.swift */; };
 		DC23E0362D090AF1004DB57B /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E0352D090AEF004DB57B /* SystemImage.swift */; };
 		DC23E0382D091175004DB57B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E0372D091173004DB57B /* Strings.swift */; };
 		DC23E03B2D0920EE004DB57B /* LinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23E03A2D0920E9004DB57B /* LinkRow.swift */; };
@@ -20,7 +22,7 @@
 		DCF2DE472D01652400C119E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF2DE412D01652400C119E5 /* Preview Assets.xcassets */; };
 		DCF2DE482D01652400C119E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF2DE432D01652400C119E5 /* Assets.xcassets */; };
 		DCF2DE4A2D01652400C119E5 /* WhopTakeHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE452D01652400C119E5 /* WhopTakeHomeApp.swift */; };
-		DCF2DE4D2D01652D00C119E5 /* WhopTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE4B2D01652D00C119E5 /* WhopTakeHomeTests.swift */; };
+		DCF2DE4D2D01652D00C119E5 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE4B2D01652D00C119E5 /* HomeViewModelTests.swift */; };
 		DCF2DE582D07AEA500C119E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE572D07AEA500C119E5 /* HomeView.swift */; };
 		DCF2DE5A2D07AFB700C119E5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE592D07AFB500C119E5 /* HomeViewModel.swift */; };
 		DCF2DE602D08D27100C119E5 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2DE5F2D08D26E00C119E5 /* ListItem.swift */; };
@@ -37,16 +39,11 @@
 			remoteGlobalIDString = DCF2DE132D015C1500C119E5;
 			remoteInfo = WhopTakeHome;
 		};
-		DCF2DE2F2D015C1600C119E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DCF2DE0C2D015C1500C119E5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DCF2DE132D015C1500C119E5;
-			remoteInfo = WhopTakeHome;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC08DDFB2D0BBBAA00DDA962 /* FolderStateCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStateCacheTests.swift; sourceTree = "<group>"; };
+		DC08DDFD2D0BBC4400DDA962 /* ListItemGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemGeneratorTests.swift; sourceTree = "<group>"; };
 		DC23E0352D090AEF004DB57B /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		DC23E0372D091173004DB57B /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		DC23E03A2D0920E9004DB57B /* LinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRow.swift; sourceTree = "<group>"; };
@@ -62,7 +59,7 @@
 		DCF2DE412D01652400C119E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DCF2DE432D01652400C119E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCF2DE452D01652400C119E5 /* WhopTakeHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopTakeHomeApp.swift; sourceTree = "<group>"; };
-		DCF2DE4B2D01652D00C119E5 /* WhopTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopTakeHomeTests.swift; sourceTree = "<group>"; };
+		DCF2DE4B2D01652D00C119E5 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		DCF2DE572D07AEA500C119E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DCF2DE592D07AFB500C119E5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DCF2DE5F2D08D26E00C119E5 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
@@ -80,13 +77,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DCF2DE212D015C1600C119E5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCF2DE2B2D015C1600C119E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,7 +166,9 @@
 		DCF2DE4C2D01652D00C119E5 /* WhopTakeHomeTests */ = {
 			isa = PBXGroup;
 			children = (
-				DCF2DE4B2D01652D00C119E5 /* WhopTakeHomeTests.swift */,
+				DCF2DE4B2D01652D00C119E5 /* HomeViewModelTests.swift */,
+				DC08DDFB2D0BBBAA00DDA962 /* FolderStateCacheTests.swift */,
+				DC08DDFD2D0BBC4400DDA962 /* ListItemGeneratorTests.swift */,
 			);
 			path = WhopTakeHomeTests;
 			sourceTree = "<group>";
@@ -279,10 +271,6 @@
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = DCF2DE132D015C1500C119E5;
 					};
-					DCF2DE2D2D015C1600C119E5 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = DCF2DE132D015C1500C119E5;
-					};
 				};
 			};
 			buildConfigurationList = DCF2DE0F2D015C1500C119E5 /* Build configuration list for PBXProject "WhopTakeHome" */;
@@ -322,13 +310,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCF2DE2C2D015C1600C119E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,14 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCF2DE4D2D01652D00C119E5 /* WhopTakeHomeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCF2DE2A2D015C1600C119E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DC08DDFC2D0BBBB000DDA962 /* FolderStateCacheTests.swift in Sources */,
+				DCF2DE4D2D01652D00C119E5 /* HomeViewModelTests.swift in Sources */,
+				DC08DDFE2D0BBC5100DDA962 /* ListItemGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,11 +354,6 @@
 			isa = PBXTargetDependency;
 			target = DCF2DE132D015C1500C119E5 /* WhopTakeHome */;
 			targetProxy = DCF2DE252D015C1600C119E5 /* PBXContainerItemProxy */;
-		};
-		DCF2DE302D015C1600C119E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DCF2DE132D015C1500C119E5 /* WhopTakeHome */;
-			targetProxy = DCF2DE2F2D015C1600C119E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -574,7 +545,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49MJRZBUY4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.stephensowole.WhopTakeHomeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -593,7 +564,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49MJRZBUY4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.stephensowole.WhopTakeHomeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
